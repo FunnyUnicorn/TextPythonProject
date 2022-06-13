@@ -142,9 +142,7 @@ with st.echo(code_location='below'):
     map = map[map['Category: All categories'].notna()]
     map['Category: All categories'] = map['Category: All categories'].astype('int')
     res = world.merge(map, on=["name"])
-    fig, ax = plt.subplots(figsize=(20,10))
-    fig2 = res.plot(column = "Category: All categories", ax=ax, legend = True)
-    st.pyplot(fig)
+    
 
     answer = st.selectbox("Would you like to see the popularity of a selected celebrity depending on the countries income? The calculation may take some time.", ['No', 'Yes'])
     if answer == 'Yes':
