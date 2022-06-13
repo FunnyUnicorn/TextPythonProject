@@ -1,7 +1,6 @@
 import streamlit as st
 with st.echo(code_location='below'):
     import pandas as pd
-    import matplotlib.pyplot as plt
     import plotly.express as px
     import numpy as np
     import geopandas as gpd
